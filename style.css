@@ -1,0 +1,75 @@
+/* CSS Template */
+
+/* Base page settings */
+ body {
+ box-sizing: border-box;
+  background-color: tan;
+  color: saddlebrown;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+  background-color: tan;
+  color: saddlebrown;
+  text-align: center;
+  padding: 20px 20px 20px 20px;
+  border: 2px red;
+  margin: auto;
+  line-height: 1;
+  background-image: radial-gradient(saddlebrown,
+                                tan, ivory);  /* Gradient */
+}
+
+    h1 {
+  background-color: tan;
+  color: saddlebrown;
+  text-shadow: 4px 4px 4px black;
+  margin: auto;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  font-size: 4.5em;
+  font-weight: bold;
+  line-height: 1.2em; 
+  background-image: radial-gradient(saddlebrown,
+                                tan, ivory);  /* Gradient */
+{
+h2 {
+  background-color: tan;
+  font-size: 5em;
+  text-align: center; 
+  font-weight: 800;
+  color: saddlebrown;
+  padding: 25px 10px 25px 10px;  /* added            10px padding to sides looks much better  */
+  background-image: radial-gradient(saddlebrown,
+                                tan, ivory);  /* Gradient */
+}
+
+h3 {
+  background-color: tan;
+  font-size: 4.0em;
+  font-weight: bold;
+  color: saddlebrown;
+  text-align: center;
+  margin: 10px auto 0px auto;
+  padding: 10px auto 10px auto;
+  background-image: radial-gradient(saddlebrown,
+                                tan, ivory);  /* Gradient */
+  {
+
+  p {
+    background-color: tan;
+    color: saddlbrown;
+    font-size: 1em;
+  }
+
+footer { 
+  background-color: tan;
+  color: saddlebrown;
+  margin: 10px auto 0px auto;
+  padding: 10px auto 10px auto;
+  text-align: center;
+  font-size: 4.0em;
+  background-image: radial-gradient(saddlebrown,
+                                tan, ivory);  /* Gradient */
+}
