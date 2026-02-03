@@ -29,6 +29,7 @@ header {
   padding: 20px 20px 20px 20px;
   text-align: center;
   font-size: 4.5em;
+  border-radius: 10px;
   font-weight: bold;
   line-height: 1.2em; 
   background-image: radial-gradient(saddlebrown,
@@ -36,11 +37,13 @@ header {
 {
 h2 {
   background-color: tan;
-  font-size: 5em;
+  font-size: 3em;
+  border-radius: 5px;
   text-align: center; 
   font-weight: 800;
   color: saddlebrown;
-  padding: 25px 10px 25px 10px;  /* added            10px padding to sides looks much better  */
+  margin: auto;
+  padding: 20px 20px 20px 20px;  /* added            10px padding to sides looks much better  */
   background-image: radial-gradient(saddlebrown,
                                 tan, ivory);  /* Gradient */
 }
@@ -50,9 +53,10 @@ h3 {
   font-size: 4.0em;
   font-weight: bold;
   color: saddlebrown;
+  border-radius: 10px;
   text-align: center;
-  margin: 10px auto 0px auto;
-  padding: 10px auto 10px auto;
+  margin: auto;
+  padding: 20px 20px 20px 20px;
   background-image: radial-gradient(saddlebrown,
                                 tan, ivory);  /* Gradient */
   {
