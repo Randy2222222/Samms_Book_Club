@@ -68,8 +68,10 @@ h3 {
     color: saddlbrown;
     font-size: 1em;
   }
- a hover {
-  color: greeen;
+ a {
+  color: black;
+  text-decoration: none;
+  hover: green;
  }
 
 footer { 
