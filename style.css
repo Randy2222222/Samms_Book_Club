@@ -15,7 +15,7 @@ header {
   background-color: tan;
   color: saddlebrown;
   text-align: center;
-  padding: 10px;
+  padding: 20px 20px 20px 20px;
   border: 2px saddlebrown;
   margin: 0; /* auto */
   line-height: 1;
@@ -28,7 +28,7 @@ header {
   color: saddlebrown;
   text-shadow: 4px 4px 4px black;
   margin: 0; /* auto */
-  padding: 10px;
+  padding: 20px 20px 20px 20px;
   text-align: center;
   font-size: 4.5em;
   border-radius: 10px;
