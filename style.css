@@ -36,7 +36,7 @@ header {
   line-height: 1.2em; 
   background-image: radial-gradient(saddlebrown,
                                 tan, ivory);  /* Gradient */
-{
+    }
 h2 {
   background-color: tan;
   font-size: 3em;
