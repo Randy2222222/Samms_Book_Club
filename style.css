@@ -15,8 +15,8 @@ header {
   background-color: tan;
   color: saddlebrown;
   text-align: center;
-  padding: 20px 20px 20px 20px;
-  border: 2px red;
+  padding: 10px;
+  border: 2px saddlebrown;
   margin: 0; /* auto */
   line-height: 1;
   background-image: radial-gradient(saddlebrown,
@@ -28,7 +28,7 @@ header {
   color: saddlebrown;
   text-shadow: 4px 4px 4px black;
   margin: 0; /* auto */
-  padding: 20px 20px 20px 20px;
+  padding: 10px;
   text-align: center;
   font-size: 4.5em;
   border-radius: 10px;
@@ -68,14 +68,7 @@ h3 {
     color: saddlbrown;
     font-size: 1em;
   }
- a {
-  color: black;
-  text-decoration: none !important;
- }
- a.hover {
-  color: green;
-  text-decoration: none;
- }
+ 
 
 footer { 
   background-color: tan;
