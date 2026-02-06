@@ -39,13 +39,14 @@ header {
     }
 h2 {
   background-color: tan;
-  font-size: 3em;
+  font-size: 2em;
   border-radius: 5px;
   text-align: center; 
   font-weight: 800;
   color: saddlebrown;
+  text-shadow: 3px 3px 3px solid black;
   margin: auto;
-  padding: 20px 20px 20px 20px;  /* added            10px padding to sides looks much better  */
+  padding: 10px;  /* added            10px padding to sides looks much better  */
   background-image: radial-gradient(saddlebrown,
                                 tan, ivory);  /* Gradient */
 }
