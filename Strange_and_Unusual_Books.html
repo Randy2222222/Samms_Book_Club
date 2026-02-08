@@ -8,7 +8,6 @@
   <style>
      body {
   margin: 0;
-  height: 100vh;
   padding: 0;
   box-sizing: border-box;
   background-color: tan;
@@ -50,16 +49,14 @@ h2 {
   font-weight: 800;
   color: saddlebrown;
   text-shadow: 3px 3px 3px solid black;
-  margin: auto;
+  margin: 10px auto;
   padding: 10px;  /* added            10px padding to sides looks much better  */
   background-image: radial-gradient(saddlebrown,
                                 tan, ivory);  /* Gradient */
 }
 aside {
   width: 30%;
-  text-shadow: 3px 3px 3px black;
-  padding: 10px;
-  margin: auto;
+  margin: 15px;
   float: left;
   font-style: italic;
   background-color: tan;
@@ -79,19 +76,10 @@ aside {
       color: black;
       font-size: 1em;
     }
-    #page-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-#content-wrap {
-    flex: 1; /* This allows the content to grow and push the footer down */
-}
-
-#footer {
-    height: 2.5rem; /* Set the footer height */
-}
+    footer{
+      margin: auto auto 5px auto;
+    }
+    
 </style>
 </head>
      <body>
