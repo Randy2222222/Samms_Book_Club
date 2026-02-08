@@ -106,6 +106,54 @@ header {
         <p>Discover the best books and enjoy a seamless shopping experience.</p>
         <button class="btn btn-primary">Shop Now</button>
     </section>
+    <section class="categories">
+        <h2>Shop by Category</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <a href="/men" class="category-item">
+                <img loading="lazy"
+                    src="https://media.geeksforgeeks.org/wp-content/uploads/20250724124356374694/male_1.jpg"
+                    alt="Men's Category">
+                <h3>Men's Wear</h3>
+                <p>Explore our wide range of men's fashion.</p>
+            </a>
+            <a href="/women" class="category-item">
+                <img loading="lazy"
+                    src="https://media.geeksforgeeks.org/wp-content/uploads/20250724125020503946/women_5.jpg"
+                    alt="Women's Category">
+                <h3>Women's Wear</h3>
+                <p>Discover the latest women's fashion trends.</p>
+            </a>
+            <a href="/kids" class="category-item">
+                <img loading="lazy"
+                    src="https://media.geeksforgeeks.org/wp-content/uploads/20250724125020976003/kids_2.jpg"
+                    alt="Kids Category">
+                <h3>Kids Wear</h3>
+                <p>Find stylish and comfortable options for your little ones.</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Example Product -->
+            <div class="product-item" id="Product_1">
+                <img loading="lazy"
+                    src="https://media.geeksforgeeks.org/wp-content/uploads/20250724124201503672/women_1.jpg"
+                    alt="Product 1">
+                <h3>Product 1</h3>
+                <p>Description: Dress 1</p>
+                <div>
+                    <p class="Discount">Get 15% off</p>
+                    <div class="flex justify-between items-center">
+                        <span class="price">$200</span>
+                        <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat Products (Product_2 to Product_6)... same structure as above -->
+        </div>
+    </section>
     <!-- JavaScript -->
     <script>
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
