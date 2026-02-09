@@ -10,18 +10,6 @@
   font-family: Arial, sans-serif;
 }
 
-/* Header */
-header {
-  background-color: tan;
-  color: saddlebrown;
-  text-align: center;
-  padding: 20px 20px 20px 20px;
-  border: 2px saddlebrown;
-  margin: 0; /* auto */
-  line-height: 1;
-  background-image: radial-gradient(saddlebrown,
-                                tan, ivory);  /* Gradient */
-}
 
     h1 {
   background-color: tan;
