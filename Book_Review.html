@@ -44,6 +44,26 @@ h2 {
   background-image: radial-gradient(saddlebrown,
                                 tan, ivory);  /* Gradient */
 }
+    .comments-section {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+#comments-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#comment-form {
+  margin-top: 20px;
+}
+
+#comment {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+}
     a {
             color: black;
             text-decoration: none;
@@ -79,7 +99,65 @@ h2 {
   
     </header>
     
-    <main></main>
+    <main><div class="comments-section">
+  <h3>Comments</h3>
+  <ul id="comments-list">
+    <!-- Comments will be added here -->
+  </ul>
+  <form id="comment-form">
+    <textarea id="comment" placeholder="Leave a comment..." required></textarea>
+    <button type="submit">Post Comment</button>
+  </form>
+</div></main>
+       <script>document.getElementById('comment-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  const commentText = document.getElementById('comment').value;
+  if (commentText.trim() === '') return;
+  
+  const commentList = document.getElementById('comments-list');
+  const commentItem = document.createElement('li');
+  commentItem.textContent = commentText;
+  
+  commentList.appendChild(commentItem);
+  document.getElementById('comment').value = ''; // clear the input
+});
+
+<code class="javascript">
+function addReplyFeature(commentItem) {
+  const replyForm = document.createElement('form');
+  replyForm.innerHTML = '<textarea placeholder="Reply..." required></textarea><button type="submit">Reply</button>';
+  
+  replyForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const replyText = replyForm.querySelector('textarea').value;
+    if (replyText.trim() === '') return;
+    
+    const replyItem = document.createElement('li');
+    replyItem.textContent = replyText;
+    commentItem.appendChild(replyItem);
+    replyForm.querySelector('textarea').value = ''; // clear the input
+  });
+  
+  commentItem.appendChild(replyForm);
+}
+
+document.getElementById('comment-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const commentText = document.getElementById('comment').value;
+  if (commentText.trim() === '') return;
+
+  const commentList = document.getElementById('comments-list');
+  const commentItem = document.createElement('li');
+  commentItem.textContent = commentText;
+  
+  addReplyFeature(commentItem); // add reply option
+  commentList.appendChild(commentItem);
+  document.getElementById('comment').value = ''; // clear the input
+});
+</script>
    
   
 
