@@ -34,7 +34,7 @@ form {
     p {
       text-align: center;
     }
-    *Added Container for Signature */
+   /*Added Container for Signature */
 .container {
   position: relative; /* Set the parent to relative */
   height: 400px;     /* Set a height for the container */
@@ -66,19 +66,24 @@ form {
   Email: <input type="text" name="email"><br><br>
 <form action="upload.php" method="post" enctype="multipart/form-data">
         <label for="imageUpload">Choose an image to upload:</label>
-        <input type="file" id="imageUpload" name="image" accept="image/*">
+        <input type="file" id="imageUpload" name="image" accept="image/*"><!--change id from imageUpload-->
         <input type="submit" value="Upload Image">
     </form>
    </div>
-       <script src="https://utteranc.es/client.js"
-repo="[Randy2222222/Samms_Book_Club]"
-issue-term="pathname"
-theme="github-light"
-crossorigin="anonymous"
-async>
-</script>
+       <script>document.getElementById('fileInput').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
 
-    <script="js/image.js"></script>
+    reader.onload = function(e) {
+        const img = document.getElementById('imageDisplay');
+        img.src = e.target.result; // Set the image source to the file data
+        img.style.display = 'block'; // Make the image visible
+    };
+
+    if (file) {
+        reader.readAsDataURL(file); // Read the file as a data URL
+    }
+});</script>
    
   
 
