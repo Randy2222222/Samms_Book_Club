@@ -60,6 +60,18 @@ h2 {
           margin-bottom: 5px;
           text-align: center;
         }
+        *Added Container for Signature */
+.container {
+  position: relative; /* Set the parent to relative */
+  height: 400px;     /* Set a height for the container */
+}
+
+.footer { /* was text */
+  position: absolute; /* Position the text absolutely */
+  bottom: 0;         /* Align to the bottom */
+  left: 50%;         /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+}
     </style>
 </head>
      <body>
@@ -75,7 +87,9 @@ h2 {
   
 
 
-
+ <div class="container">
+  <div class="footer">
   <footer><p style="font-size: 1.5em;"><a href="index.html" target="_self">Home </a><a href="mailto:Samms_Book_Store@gmail.com" target="_email">| Contact |</a><a href="Book_Store.html" target="_blank"> E-commerce Storefront</a></p></style></footer>
-</body>
+  </div></div>
+  </body>
 </html>
