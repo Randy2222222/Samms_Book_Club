@@ -104,8 +104,8 @@ form {
   
     
     
-    <main><div class="comments-section">
-  <h2>Comments & Reviews</h2>
+      <main><div class="comments-section">
+  <h2>Post Review</h2>
   <ul id="comments-list">
     <!-- Comments will be added here -->
   </ul>
@@ -115,59 +115,19 @@ form {
     <button type="submit">Post Review</button>
   </form>
 </div></main>
-   <script>
-// Reply to comments
-function addReplyFeature(commentItem) {
-  const replyForm = document.createElement('form');
-  replyForm.innerHTML = `
-    <input type="text" placeholder="Your name" required>
-    <textarea placeholder="Reply..." required></textarea>
-    <button type="submit">Reply</button>
-  `;
-
-  replyForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const replyName = replyForm.querySelector('input').value;
-    const replyText = replyForm.querySelector('textarea').value;
-
-    if (replyName.trim() === '' || replyText.trim() === '') return;
-
-    const replyItem = document.createElement('li');
-    replyItem.innerHTML = `<strong>${replyName}:</strong> ${replyText}`;
-
-    commentItem.appendChild(replyItem);
-
-    // Clear reply inputs
-    replyForm.querySelector('input').value = '';
-    replyForm.querySelector('textarea').value = '';
-  });
-
-  commentItem.appendChild(replyForm);
-}
-
-// Main comment submit
-document.getElementById('comment-form').addEventListener('submit', function(event) {
+    <script>    document.getElementById('comment-form').addEventListener('submit', function(event) { 
   event.preventDefault();
-
-  const name = document.getElementById('name').value;
+  
   const commentText = document.getElementById('comment').value;
-
-  if (name.trim() === '' || commentText.trim() === '') return;
-
+  if (commentText.trim() === '') return;
+  
   const commentList = document.getElementById('comments-list');
   const commentItem = document.createElement('li');
-
-  commentItem.innerHTML = `<strong>${name}:</strong> ${commentText}`;
-
-  addReplyFeature(commentItem);
+  commentItem.textContent = commentText;
+  
   commentList.appendChild(commentItem);
-
-  // Clear main inputs
-  document.getElementById('name').value = '';
-  document.getElementById('comment').value = '';
-});
-</script>
+  document.getElementById('comment').value = ''; // clear the input
+}); </script> 
       
   
 
