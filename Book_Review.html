@@ -109,19 +109,19 @@ h2 {
     <button type="submit">Post Review</button>
   </form>
 </div></main>
-       <script>document.getElementById('comment-form').addEventListener('submit', function(event) {
-  event.preventDefault();
+   <!--    <script>    document.getElementById('comment-form').addEventListener('submit', function(event) { 
+//  event.preventDefault();
   
-  const commentText = document.getElementById('comment').value;
-  if (commentText.trim() === '') return;
+//  const commentText = document.getElementById('comment').value;
+//  if (commentText.trim() === '') return;
   
-  const commentList = document.getElementById('comments-list');
-  const commentItem = document.createElement('li');
-  commentItem.textContent = commentText;
+//  const commentList = document.getElementById('comments-list');
+//  const commentItem = document.createElement('li');
+//  commentItem.textContent = commentText;
   
-  commentList.appendChild(commentItem);
-  document.getElementById('comment').value = ''; // clear the input
-}); </script>
+//  commentList.appendChild(commentItem);
+//  document.getElementById('comment').value = ''; // clear the input
+//}); </script> -->
        <script>
 // Reply to comments
 function addReplyFeature(commentItem) {
