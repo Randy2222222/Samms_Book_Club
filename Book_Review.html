@@ -109,24 +109,12 @@ h2 {
     <button type="submit">Post Review</button>
   </form>
 </div></main>
-   <!--    <script>    document.getElementById('comment-form').addEventListener('submit', function(event) { 
-//  event.preventDefault();
-  
-//  const commentText = document.getElementById('comment').value;
-//  if (commentText.trim() === '') return;
-  
-//  const commentList = document.getElementById('comments-list');
-//  const commentItem = document.createElement('li');
-//  commentItem.textContent = commentText;
-  
-//  commentList.appendChild(commentItem);
-//  document.getElementById('comment').value = ''; // clear the input
-//}); </script> -->
-       <script>
+   <script>
 // Reply to comments
 function addReplyFeature(commentItem) {
   const replyForm = document.createElement('form');
   replyForm.innerHTML = `
+    <input type="text" placeholder="Your name" required>
     <textarea placeholder="Reply..." required></textarea>
     <button type="submit">Reply</button>
   `;
@@ -134,19 +122,25 @@ function addReplyFeature(commentItem) {
   replyForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
+    const replyName = replyForm.querySelector('input').value;
     const replyText = replyForm.querySelector('textarea').value;
-    if (replyText.trim() === '') return;
+
+    if (replyName.trim() === '' || replyText.trim() === '') return;
 
     const replyItem = document.createElement('li');
-    replyItem.textContent = replyText;
+    replyItem.innerHTML = `<strong>${replyName}:</strong> ${replyText}`;
 
     commentItem.appendChild(replyItem);
+
+    // Clear reply inputs
+    replyForm.querySelector('input').value = '';
     replyForm.querySelector('textarea').value = '';
   });
 
   commentItem.appendChild(replyForm);
 }
 
+// Main comment submit
 document.getElementById('comment-form').addEventListener('submit', function(event) {
   event.preventDefault();
 
@@ -158,13 +152,12 @@ document.getElementById('comment-form').addEventListener('submit', function(even
   const commentList = document.getElementById('comments-list');
   const commentItem = document.createElement('li');
 
-  // Format: Name: Comment
   commentItem.innerHTML = `<strong>${name}:</strong> ${commentText}`;
 
   addReplyFeature(commentItem);
   commentList.appendChild(commentItem);
 
-  // Clear inputs
+  // Clear main inputs
   document.getElementById('name').value = '';
   document.getElementById('comment').value = '';
 });
