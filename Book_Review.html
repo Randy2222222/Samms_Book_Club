@@ -121,9 +121,9 @@ h2 {
   
   commentList.appendChild(commentItem);
   document.getElementById('comment').value = ''; // clear the input
-});
-
-<code class="javascript">
+}); </script>
+       <script>
+// Reply to comments 
 function addReplyFeature(commentItem) {
   const replyForm = document.createElement('form');
   replyForm.innerHTML = '<textarea placeholder="Reply..." required></textarea><button type="submit">Reply</button>';
