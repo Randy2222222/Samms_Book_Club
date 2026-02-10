@@ -104,6 +104,7 @@ h2 {
     <!-- Comments will be added here -->
   </ul>
   <form id="comment-form">
+    <input type="text" id="name" placeholder="Your name" required>
     <textarea id="comment" placeholder="Leave your comment and name...." required></textarea>
     <button type="submit">Post Review</button>
   </form>
@@ -121,6 +122,53 @@ h2 {
   commentList.appendChild(commentItem);
   document.getElementById('comment').value = ''; // clear the input
 }); </script>
+       <script>
+// Reply to comments
+function addReplyFeature(commentItem) {
+  const replyForm = document.createElement('form');
+  replyForm.innerHTML = `
+    <textarea placeholder="Reply..." required></textarea>
+    <button type="submit">Reply</button>
+  `;
+
+  replyForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const replyText = replyForm.querySelector('textarea').value;
+    if (replyText.trim() === '') return;
+
+    const replyItem = document.createElement('li');
+    replyItem.textContent = replyText;
+
+    commentItem.appendChild(replyItem);
+    replyForm.querySelector('textarea').value = '';
+  });
+
+  commentItem.appendChild(replyForm);
+}
+
+document.getElementById('comment-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const commentText = document.getElementById('comment').value;
+
+  if (name.trim() === '' || commentText.trim() === '') return;
+
+  const commentList = document.getElementById('comments-list');
+  const commentItem = document.createElement('li');
+
+  // Format: Name: Comment
+  commentItem.innerHTML = `<strong>${name}:</strong> ${commentText}`;
+
+  addReplyFeature(commentItem);
+  commentList.appendChild(commentItem);
+
+  // Clear inputs
+  document.getElementById('name').value = '';
+  document.getElementById('comment').value = '';
+});
+</script>
        <script>
 // Reply to comments 
 function addReplyFeature(commentItem) {
