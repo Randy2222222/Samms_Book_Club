@@ -104,31 +104,44 @@ form {
   
     
     
-      <main><div class="comments-section">
-  <h2>Post Review</h2>
-  <ul id="comments-list">
-    <!-- Comments will be added here -->
-  </ul><div class="form-container">
-    <div class="form">
-  <form id="comment-form">
-    <input type="text" id="name" placeholder="Your name" required> <!-- added name -->
-    <textarea id="comment" placeholder="Leave your comment and name...." required></textarea>
-    <button type="submit">Post Review</button>
-  </form>
-</div></div></div></main>
-    <script>    document.getElementById('comment-form').addEventListener('submit', function(event) { 
-  event.preventDefault();
+      <main><!-- modify this form HTML and place wherever you want your form --><form id="comment-form"
+      action="https://formspree.io/f/abcdwxyz"
+      method="POST">
   
-  const commentText = document.getElementById('comment').value;
-  if (commentText.trim() === '') return;
-  
-  const commentList = document.getElementById('comments-list');
-  const commentItem = document.createElement('li');
-  commentItem.textContent = commentText;
-  
-  commentList.appendChild(commentItem);
-  document.getElementById('comment').value = ''; // clear the input
-}); </script> 
+  <input type="text" name="name" id="name" placeholder="Your name" required>
+
+  <textarea name="comment" id="comment"
+    placeholder="Leave your review..." required></textarea>
+
+  <!-- optional: prevents spam -->
+  <input type="text" name="_gotcha" style="display:none">
+
+  <button type="submit">Post Review</button>
+</form>
+        <script>
+document.getElementById('comment-form').addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const name = form.name.value.trim();
+  const comment = form.comment.value.trim();
+  if (!name || !comment) return;
+
+  // show review immediately
+  const li = document.createElement('li');
+  li.innerHTML = `<strong>${name}</strong>: ${comment}`;
+  document.getElementById('comments-list').appendChild(li);
+
+  // send to Formspree
+  await fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  });
+
+  form.reset();
+});
+</script>
       
   
 
