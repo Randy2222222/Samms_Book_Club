@@ -106,7 +106,7 @@ form {
     
    <div class="form-container">       
 <main><div class="comments-section">
-  <h2>Discussion & Comments</h2>
+<!--  <h2>Discussion & Comments</h2>-->
 <!--  <ul id="comments-list"> -->
     <!-- Comments will be added here -->
 <!--  </ul> -->
@@ -123,8 +123,7 @@ function addReplyFeature(commentItem) {
   replyForm.innerHTML = `
     <input type="text" placeholder="Your name" required>
     <textarea placeholder="Reply..." required></textarea>
-    <button type="submit">Reply</button>
-  `;
+    <button type="submit">Reply</button>`;
 
   replyForm.addEventListener('submit', function(event) {
     event.preventDefault();
