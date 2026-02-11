@@ -104,20 +104,18 @@ form {
   
     
     
-      <main><!-- modify this form HTML and place wherever you want your form --><form id="comment-form"
-      action="https://formspree.io/f/abcdwxyz"
-      method="POST">
-  
-  <input type="text" name="name" id="name" placeholder="Your name" required>
-
-  <textarea name="comment" id="comment"
-    placeholder="Leave your review..." required></textarea>
-
-  <!-- optional: prevents spam -->
-  <input type="text" name="_gotcha" style="display:none">
-
-  <button type="submit">Post Review</button>
-</form></main>
+      <main><div class="comments-section">
+  <h2>Post Review</h2>
+  <ul id="comments-list">
+    <!-- Comments will be added here -->
+  </ul><div class="form-container">
+    <div class="form">
+  <form id="comment-form">
+    <input type="text" id="name" placeholder="Your name" required> <!-- added name -->
+    <textarea id="comment" placeholder="Leave your comment and name...." required></textarea>
+    <button type="submit">Post Review</button>
+  </form>
+</div></div></div></main>
         <script>
 document.getElementById('comment-form').addEventListener('submit', async function (e) {
   e.preventDefault();
