@@ -78,12 +78,14 @@ form {
   <input type="text" id="name" placeholder="Your name" required> <!-- added name -->
   <input type="file"
          name="image"
+         id="img" 
          accept="image/*"
-         required>
+         required> <!-- added id="img" -->
   <button type="submit">Upload Image</button>
-       <input type="file" id="img" name="image" accept="image/*">
-<img id="preview" style="max-width:200px; display:none">
-     </form></div></div>
+  </form></div></div>
+      <!-- <input type="file" id="img" name="image" accept="image/*"> -->
+<img id="preview" style="max-width:200px; display:inline-block; margin-top: 80px;"> <!-- change display: none; -->
+     
 <script>
 document.getElementById('img').addEventListener('change', e => {
   const file = e.target.files[0];
