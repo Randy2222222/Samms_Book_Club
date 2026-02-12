@@ -119,6 +119,13 @@ form {
   </form>
 </div></div></div></main>
         <script>
+          const btn = document.getElementById('btn');
+
+btn.addEventListener('click', function() {
+    btn.style.backgroundColor = 'purple'; // Change to your desired color
+    btn.style.color = 'white'; // Optional: Change text color
+});
+
 document.getElementById('comment-form').addEventListener('submit', async function (e) {
   e.preventDefault();
 
