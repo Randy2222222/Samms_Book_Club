@@ -62,28 +62,33 @@ form {
     
    <div class="form-container"> 
      <form id="myForm">
-     Name: <input type="text" name="fname"><br><br>
-  Email: <input type="text" name="email"><br><br>
-<form action="upload.php" method="post" enctype="multipart/form-data">
-        <label for="imageUpload">Choose an image to upload:</label>
-        <input type="file" id="imageUpload" name="image" accept="image/*"><!--change id from imageUpload-->
-        <input type="submit" value="Upload Image">
-    </form>
-   </div>
-       <script>document.getElementById('fileInput').addEventListener('change', function(event) {
-    const file = event.target.files[0];
-    const reader = new FileReader();
+     
+<!-- modify this form HTML and place wherever you want your form -->
+<form
+  action="https://formspree.io/f/mreapzay"
+  method="POST"
+  enctype="multipart/form-data">
+  <input type="email" name="email" placeholder="Your email" required>
+  <input type="file"
+         name="image"
+         accept="image/*"
+         required>
+  <button type="submit">Upload Image</button>
+       <input type="file" id="img" name="image" accept="image/*">
+<img id="preview" style="max-width:200px; display:none">
+     </form>
+<script>
+document.getElementById('img').addEventListener('change', e => {
+  const file = e.target.files[0];
+  if (!file) return;
 
-    reader.onload = function(e) {
-        const img = document.getElementById('imageDisplay');
-        img.src = e.target.result; // Set the image source to the file data
-        img.style.display = 'block'; // Make the image visible
-    };
+  const img = document.getElementById('preview');
+  img.src = URL.createObjectURL(file);
+  img.style.display = 'block';
+});
+</script>
 
-    if (file) {
-        reader.readAsDataURL(file); // Read the file as a data URL
-    }
-});</script>
+
    
   
 
