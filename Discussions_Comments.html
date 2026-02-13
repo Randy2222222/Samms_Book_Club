@@ -127,7 +127,7 @@ form {
   <form id="comment-form">
     <input type="text" id="name" placeholder="Your name" required> <!-- added name -->
     <textarea id="comment" placeholder="Leave your comment and name...." required></textarea>
-    <button type="submit">Post Comment</button>
+    <button type="submit" style="background-color: black; color: white; border: 2px solid white; padding: 5px 8px 5px 8px; font-size: .08em; border-radius: 5px;">Post Comment</button>
   </form>
 <!--  </div> -->  </main>
    <script>
@@ -136,8 +136,8 @@ function addReplyFeature(commentItem) {
   const replyForm = document.createElement('form');
   replyForm.innerHTML = `
     <input type="text" placeholder="Your name" required>
-    <textarea placeholder="Reply..." required></textarea>
-    <button type="submit">Reply</button>`;
+    <textarea placeholder="Reply..." style="background-color: black; color: white; border: 2px solid white; padding: 5px 8px 5px 8px; font-size: .08em; border-radius: 5px;" required></textarea>
+    <button type="submit" style="background-color: black; color: white; border: 2px solid white; padding: 5px 8px 5px 8px; font-size: .08em; border-radius: 5px;">Reply</button>`;
 
   replyForm.addEventListener('submit', function(event) {
     event.preventDefault();
