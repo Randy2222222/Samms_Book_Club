@@ -104,10 +104,10 @@ form {
          accept="image/*"
          required> <!-- added id="img" changed name from image to upload -->
   <button type="submit" style="background-color: black; color: white; border: 2px solid white; padding: 5px 8px 5px 8px; font-size: .08em; border-radius: 5px;">Upload Image</button>
-</form>
+
       <!-- <input type="file" id="img" name="image" accept="image/*"> -->
 <img id="preview" style="max-width:200px; display: none; margin-top: 80px; margin-left: 40px;"> <!-- change display: none; -->
-   </div> </div>  </main>     
+</form>   </div></div>
 <script>
 document.getElementById('img').addEventListener('change', e => {
   const file = e.target.files[0];
@@ -118,6 +118,7 @@ document.getElementById('img').addEventListener('change', e => {
   img.style.display = 'block';
 });
 </script>
+     </main>
 
 
    
