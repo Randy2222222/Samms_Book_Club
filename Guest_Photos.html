@@ -63,7 +63,7 @@ form {
         cursor: pointer;
       }*/
            
-      input { [type=submit];
+    /*  input { [type=submit];
         background-color: black;
         border: 2px solid white;
         border-radius: 8px;
@@ -72,7 +72,7 @@ form {
         text-decoration: none;
         margin: 10px 450px;
         cursor: pointer;
-            }
+            }*/
     
    </style>
 </head>
@@ -88,6 +88,7 @@ form {
     
     <main>
    <div class="form-container"> 
+     <div class="form">
      
      
 <!-- modify this form HTML and place wherever you want your form -->
@@ -106,7 +107,7 @@ form {
 </form>
       <!-- <input type="file" id="img" name="image" accept="image/*"> -->
 <img id="preview" style="max-width:200px; display: none; margin-top: 80px; margin-left: 40px;"> <!-- change display: none; -->
-   </div>   </main>     
+   </div> </div>  </main>     
 <script>
 document.getElementById('img').addEventListener('change', e => {
   const file = e.target.files[0];
