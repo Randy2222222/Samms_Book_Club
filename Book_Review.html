@@ -135,14 +135,6 @@ document.getElementById('comment-form').addEventListener('submit', async functio
   const li = document.createElement('li');
   li.innerHTML = `<strong>${name}</strong>: ${comment}`;
   document.getElementById('comments-list').appendChild(li);
-
-  // send to Formspree
-//  await fetch(form.action, {
- //   method: "POST",
- //   body: new FormData(form),
- //   headers: { 'Accept': 'application/json' }
-///  });
-
   form.reset();
 });
 </script>
