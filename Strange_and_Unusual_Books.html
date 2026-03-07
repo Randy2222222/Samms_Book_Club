@@ -81,8 +81,54 @@ aside {
     article {
       width: 70%;
       float: left;
+      margin-top: 12px;
+  background-color: tan;
+  color: black;
+  display: flex;
+  align-itmes: center;
+  justify-contenr: center;
+  text-align: left;
+  border: 2px solid ivory;
+  padding: 8px;
+  min-height: 120px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1em;
+  overflow-y: auto;
     /*  margin: 15px auto auto auto;  */
     }
+     .editor {
+  color: black;
+  border: 2px solid ivory;
+  margin: 12px;
+  padding: 8px;
+  min-height: 120px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1em;
+  overflow-y: auto;
+}
+
+.editor:empty:before {
+  content: attr(placeholder);
+  color: black;
+}
+/*  .container {
+  margin-top: 12px;
+  background-color: tan;
+  color: black;
+  display: flex;
+  align-itmes: center;
+  justify-contenr: center;
+  text-align: left;
+  border: 2px solid ivory;
+  padding: 8px;
+  min-height: 120px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1em;
+  overflow-y: auto;
+} */
     
     /*Added Container for Signature */
 .container {
@@ -113,8 +159,8 @@ aside {
        contenteditable="true"
        class="editor"
        placeholder="Type your message..."></div>
-  <input type="hidden" name="message" id="hiddenMessage"> <br><br></article>
-
+  <input type="hidden" name="message" id="hiddenMessage"> <br><br></form></article>
+     
 
 
     
